@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GigaChat-проверка — Твой старт</title>
+<meta name="description" content="ИИ-проверка вакансий на законность и признаки мошенничества.">
+<meta name="theme-color" content="#21A038">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('ts_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="gigachat">
+<main>
+<section class="page-hero"><div class="container"><div class="gc-logo" style="margin-bottom:16px"><img src="assets/gigachat-icon.png" alt="GigaChat"><span>GigaChat × Твой старт</span></div>
+<h1>Проверка вакансий <span class="grad-text">искусственным интеллектом</span></h1><p class="lead">Вставьте текст вакансии — GigaChat проверит её по ТК РФ и найдёт признаки мошенничества ещё до публикации.</p></div></section>
+<section style="padding-top:8px"><div class="container gc-panel">
+  <div class="card">
+    <div class="field"><label>Текст вакансии</label><textarea id="gcText" style="min-height:200px" placeholder="Например: Нужен помощник в кафе, суббота 12:00–15:00, оплата 300 ₽ в час…"></textarea></div>
+    <p class="muted" style="font-size:13px;margin:12px 0 8px">Попробуйте примеры:</p>
+    <div class="chips" style="margin-bottom:18px"><button class="chip" data-preset="good">✅ Честная вакансия</button><button class="chip" data-preset="mid">⚠️ С замечаниями</button><button class="chip" data-preset="bad">⛔ Опасная</button></div>
+    <button class="btn btn-primary btn-block" id="gcRun"><img src="assets/gigachat-icon.png" alt="" style="width:22px"> Проверить с GigaChat</button>
+  </div>
+  <div class="card gc-result" id="gcOut"><div class="empty"><img src="assets/gigachat-icon.png" alt="" style="width:110px;margin:0 auto 16px;animation:spin 30s linear infinite">Результат проверки появится здесь</div></div>
+</div></section>
+<section style="padding-top:0"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Что проверяет ИИ</span><h2>8 проверок за 3 секунды</h2></div>
+  <div class="grid g4">
+    <div class="card reveal"><div class="ico">🌙</div><h3>Ночное время</h3><p>Смены 22:00–06:00 для подростков запрещены.</p></div>
+    <div class="card reveal"><div class="ico blue">💸</div><h3>Деньги вперёд</h3><p>«Залог», «оплата формы» и «обучение за деньги» — признаки мошенничества.</p></div>
+    <div class="card reveal"><div class="ico yel">🚫</div><h3>Запрещённые сферы</h3><p>Алкоголь, табак, азартные игры, ночные клубы.</p></div>
+    <div class="card reveal"><div class="ico">⏱️</div><h3>Длина смены и оплата</h3><p>Лимиты ТК РФ по возрасту и ставка не ниже 200 ₽/ч.</p></div>
+  </div>
+  <p class="muted" style="font-size:13px;margin-top:20px">Демо-версия: проверка работает на правилах внутри браузера. В продукте — подключение GigaChat API (планируемая интеграция).</p>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

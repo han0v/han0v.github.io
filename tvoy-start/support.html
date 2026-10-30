@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Поддержка — Твой старт</title>
+<meta name="description" content="Техподдержка платформы «Твой старт»: чат-бот, обращения, FAQ, правила.">
+<meta name="theme-color" content="#21A038">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('ts_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="support">
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">💬 Поддержка</span><h1>Мы на связи <span class="grad-text">каждый день</span></h1><p class="lead">Чат-бот Стартик ответит сразу, оператор — в течение 15 минут. Для родителей и работодателей — тоже.</p></div></section>
+
+<section style="padding-top:8px"><div class="container grid g2" style="align-items:start">
+  <div class="chat">
+    <div class="chat-head"><div class="ava-s">🤖</div><div><b>Стартик</b><div style="font-size:12px;opacity:.85">● онлайн · отвечает мгновенно</div></div></div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-quick"><button data-q="С 14 лет можно работать?">С 14 лет можно?</button><button data-q="Как оформить самозанятость?">Самозанятость</button><button data-q="Когда придёт оплата?">Оплата</button><button data-q="Меня просят заплатить за форму">Мошенники</button></div>
+    <form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Напишите вопрос…" aria-label="Сообщение" maxlength="200"><button class="btn btn-primary btn-sm" type="submit">➤</button></form>
+  </div>
+  <div class="grid" style="gap:20px">
+    <form class="card form" id="ticketForm">
+      <h3>📨 Обращение в поддержку</h3>
+      <div class="row2"><div class="field"><label>Я</label><select><option>Подросток</option><option>Родитель</option><option>Работодатель</option></select></div><div class="field"><label>Тема</label><select><option>Оплата</option><option>Вакансия</option><option>Жалоба</option><option>Другое</option></select></div></div>
+      <div class="field"><label>Сообщение</label><textarea required placeholder="Опишите ситуацию" maxlength="500"></textarea></div>
+      <button class="btn btn-primary" type="submit">Отправить</button>
+    </form>
+    <div>
+      <details class="acc" open><summary>С какого возраста можно работать?</summary><p>С 14 лет — лёгкий труд в свободное от учёбы время с письменного согласия родителя. С 16 лет — самостоятельно. Ночью и на опасных работах — нельзя.</p></details>
+      <details class="acc"><summary>Чем «Час» отличается от «Сезона»?</summary><p>«Час» — разовые задачи по договору с самозанятым, без медсправки. «Сезон» и «Постоянно» — трудовой договор с медосмотром и всеми гарантиями ТК РФ.</p></details>
+      <details class="acc"><summary>Что если работодатель не заплатил?</summary><p>Оплата резервируется заранее. Если смену не подтвердили за 24 часа, подключается модератор и деньги поступают по факту смены.</p></details>
+      <details class="acc"><summary>Влияет ли заработок на пособие семьи?</summary><p>По разъяснению Минтруда заработок подростка в свободное от учёбы время не учитывается при назначении единого пособия. По самозанятости уточняйте в СФР.</p></details>
+    </div>
+  </div>
+</div></section>
+<section style="padding-top:0"><div class="container grid g2">
+  <div class="card" id="rules"><h3>📜 Правила платформы</h3><p style="font-size:14px">Публикуются только законные вакансии для лиц до 18 лет; нельзя брать деньги с соискателей; ГПХ — только для задач с понятным результатом; при регулярной работе у одного работодателя платформа предложит трудовой договор; снижение рейтинга можно обжаловать; договоры хранятся 3 года.</p></div>
+  <div class="card" id="privacy"><h3>🔒 Конфиденциальность</h3><p style="font-size:14px">Обрабатываем минимум данных с согласия родителя (152-ФЗ). Не показываем телефоны и фамилии, связь — через чат платформы. В MVP все данные демонстрационные и хранятся только в вашем браузере.</p></div>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

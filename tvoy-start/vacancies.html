@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Вакансии — Твой старт</title>
+<meta name="description" content="Подработки для подростков в Уфе с законным фильтром по возрасту.">
+<meta name="theme-color" content="#21A038">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('ts_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="vacancies">
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">💼 Вакансии Уфы</span><h1>Найди подработку <span class="grad-text">по закону</span></h1><p class="lead">Укажи возраст — «законный фильтр» сам покажет, что тебе можно и сколько часов.</p></div></section>
+
+<section style="padding-top:8px"><div class="container">
+  <div class="tabs"><button class="on" data-tab="vac">💼 Вакансии</button><button data-tab="seek">🙋 Анкеты подростков</button></div>
+  <div class="tab-pane on" id="vac"><div class="filters">
+    <aside class="panel">
+      <h4>Мой возраст: <span id="ageOut" class="green">15</span> лет</h4>
+      <input type="range" id="age" min="14" max="17" step="1" aria-label="Возраст">
+      <div class="age-box" id="limitOut"></div>
+      <label class="check" style="margin-top:14px"><input type="checkbox" id="hol"> Сейчас каникулы</label>
+      <label class="check" style="margin-top:10px"><input type="checkbox" id="onlyOk"> Только подходящие мне</label>
+      <h4>Режим</h4>
+      <div class="chips"><button class="chip" data-mode="all">Все</button><button class="chip" data-mode="hour">⚡ Час</button><button class="chip" data-mode="season">☀️ Сезон</button><button class="chip" data-mode="perm">📅 Постоянно</button></div>
+      <h4>Район</h4><div class="field"><select id="fDistrict" aria-label="Район"></select></div>
+      <div class="age-box" style="margin-top:18px"><b>⚖️ Как работает фильтр</b><br><span class="muted">Лимиты смены — по ст. 92 и 94 ТК РФ. Вакансии сверх нормы помечены 🔒.</span></div>
+    </aside>
+    <div>
+      <div class="toolbar"><label class="search"><span>🔎</span><input id="q" placeholder="Бариста, праздник, онлайн…" aria-label="Поиск"></label><span class="muted">Подходит: <b id="vacCount">0</b></span></div>
+      <div class="vac-grid two" id="vacList"></div>
+    </div>
+  </div></div>
+  <div class="tab-pane" id="seek">
+    <div class="toolbar"><p class="muted" style="max-width:620px">Подростки сами рассказывают, чем готовы помочь, — работодатель может пригласить на смену.</p><a class="btn btn-primary btn-sm" href="post.html?as=teen">+ Разместить анкету</a></div>
+    <div class="grid g3" id="seekList"></div>
+  </div>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

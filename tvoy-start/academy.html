@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Старт-академия — Твой старт</title>
+<meta name="description" content="Три коротких модуля о правах, деньгах и безопасности перед первой подработкой.">
+<meta name="theme-color" content="#21A038">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('ts_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="academy">
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">🎓 Старт-академия</span><h1>Три модуля — <span class="grad-text">и ты готов к старту</span></h1><p class="lead">Права подростка, деньги и самозанятость, защита от мошенников. 15 минут — и бейдж, который видят работодатели.</p></div></section>
+
+<section style="padding-top:8px"><div class="container">
+  <div class="card" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:24px">
+    <span class="bdg off" id="acadBadge" style="font-size:16px">🎓 Готов к старту</span>
+    <div style="flex:1;min-width:200px"><b id="acadTxt">0 из 3 модулей</b><div class="progress"><i id="acadBar" style="width:0"></i></div></div>
+    <span class="muted" style="font-size:14px">💰 Модуль финграмотности — при поддержке партнёров платформы</span>
+  </div>
+  <div class="grid g3" id="modules"></div>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

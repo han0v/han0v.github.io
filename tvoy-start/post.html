@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Разместить — Твой старт</title>
+<meta name="description" content="Разместите вакансию или анкету: проверка по закону и GigaChat до публикации.">
+<meta name="theme-color" content="#21A038">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('ts_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="post">
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">➕ Разместить</span><h1>Вакансия или анкета — <span class="grad-text">за 2 минуты</span></h1><p class="lead">Работодатель публикует подработку, подросток — анкету «ищу подработку». Всё проходит проверку по закону и GigaChat.</p></div></section>
+
+<section style="padding-top:8px"><div class="container">
+  <div class="tabs"><button class="on" data-tab="emp">🏢 Я работодатель</button><button data-tab="teen">🙋 Я ищу подработку</button></div>
+  <div class="tab-pane on" id="emp"><div class="grid g2" style="align-items:start">
+    <form class="card form" id="empForm" novalidate>
+      <h3>Новая вакансия</h3>
+      <div class="field"><label>Название *</label><input name="title" placeholder="Помощник на празднике" maxlength="70"></div>
+      <div class="row2"><div class="field"><label>Компания *</label><input name="company" placeholder="Кафе «Ромашка»" maxlength="60"></div><div class="field"><label>ИНН</label><input name="inn" inputmode="numeric" placeholder="10 или 12 цифр" maxlength="12"></div></div>
+      <div class="row2"><div class="field"><label>Режим</label><select name="mode"><option value="hour">⚡ Час (1–3 ч)</option><option value="season">☀️ Сезон (лето)</option><option value="perm">📅 Постоянно</option></select></div><div class="field"><label>Район</label><select name="district"><option value="okt">Октябрьский</option><option value="sov">Советский</option><option value="kir">Кировский</option><option value="len">Ленинский</option><option value="kal">Калининский</option><option value="ord">Орджоникидзевский</option><option value="dem">Дёмский</option><option value="online">Онлайн</option></select></div></div>
+      <div class="row2"><div class="field"><label>Минимальный возраст</label><select name="age"><option value="14">14 лет</option><option value="15">15 лет</option><option value="16">16 лет</option><option value="17">17 лет</option></select></div><div class="field"><label>Иконка</label><select name="emoji"><option>✨</option><option>🎈</option><option>☕</option><option>📦</option><option>📚</option><option>🎨</option><option>🐕</option><option>🌳</option></select></div></div>
+      <div class="row2"><div class="field"><label>Длительность смены, ч *</label><input name="hours" type="number" min="0.5" max="12" step="0.5" value="2"></div><div class="field"><label>Время смены</label><input name="time" placeholder="Сб 12:00–14:00"></div></div>
+      <div class="row2"><div class="field"><label>Оплата, ₽ *</label><input name="pay" type="number" min="0" step="10" value="300"></div><div class="field"><label>За что</label><select name="unit"><option value="ч">за час</option><option value="смена">за смену</option><option value="задача">за задачу</option><option value="проект">за проект</option></select></div></div>
+      <div class="field"><label>Что нужно делать</label><textarea name="desc" placeholder="Опишите задачи простыми словами" maxlength="400"></textarea></div>
+      <label class="check"><input type="checkbox" checked> Я соблюдаю правила платформы и ТК РФ для работников до 18 лет</label>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-ghost" id="gcBtn"><img src="assets/gigachat-icon.png" alt="" style="width:20px"> Проверить в GigaChat</button><button type="submit" class="btn btn-primary">🚀 Опубликовать</button></div>
+    </form>
+    <div class="grid" style="gap:20px">
+      <div class="card"><h3>⚖️ Проверка по закону — в реальном времени</h3><p style="font-size:14px;margin-bottom:14px">Меняйте поля — платформа сразу подскажет, что можно.</p><div class="legal" id="legalLive"></div></div>
+      <div class="card" id="gcInline" style="display:none"></div>
+    </div>
+  </div></div>
+  <div class="tab-pane" id="teen"><div class="grid g2" style="align-items:start">
+    <form class="card form" id="teenForm" novalidate>
+      <h3>Анкета «Ищу подработку»</h3>
+      <div class="row2"><div class="field"><label>Имя *</label><input name="name" placeholder="Амир" maxlength="30"></div><div class="field"><label>Возраст</label><select name="age"><option value="14">14 лет</option><option value="15">15 лет</option><option value="16">16 лет</option><option value="17">17 лет</option></select></div></div>
+      <div class="row2"><div class="field"><label>Район</label><select name="district"><option value="okt">Октябрьский</option><option value="sov">Советский</option><option value="kir">Кировский</option><option value="len">Ленинский</option><option value="kal">Калининский</option><option value="ord">Орджоникидзевский</option><option value="dem">Дёмский</option><option value="online">Онлайн</option></select></div><div class="field"><label>Когда свободен</label><input name="free" placeholder="Выходные, после 16:00" maxlength="40"></div></div>
+      <div class="field"><label>Навыки (через запятую)</label><input name="skills" placeholder="Дизайн, фото, животные" maxlength="80"></div>
+      <div class="field"><label>О себе *</label><textarea name="about" placeholder="Чем хочешь заниматься и что уже умеешь" maxlength="200"></textarea></div>
+      <label class="check"><input type="checkbox" checked> Родитель знает о моей анкете (подтвердит одним касанием)</label>
+      <button class="btn btn-primary" type="submit">🙋 Опубликовать анкету</button>
+    </form>
+    <div class="card"><div class="ico">💡</div><h3>Как сделать анкету заметной</h3>
+      <ul style="list-style:none;display:grid;gap:12px;margin-top:12px;color:var(--muted);font-size:15px">
+        <li>🎓 Пройди <a class="green" href="academy.html">Старт-академию</a> — бейдж «Готов к старту» поднимает анкету выше</li>
+        <li>📸 Опиши, что уже умеешь: школьные проекты, кружки, волонтёрство</li>
+        <li>🧾 Оформи самозанятость за 3 минуты — тебе станут доступны онлайн-задачи</li>
+        <li>🤝 Собери <a class="green" href="teams.html">Старт-команду</a> — команды берут проекты крупнее</li>
+      </ul>
+      <p style="font-size:13px;margin-top:16px">🔒 Мы не показываем телефон и фамилию: связь — только через чат платформы.</p></div>
+  </div></div>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

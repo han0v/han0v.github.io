@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Рейтинг компаний — Твой старт</title>
+<meta name="description" content="Рейтинг работодателей Уфы по отзывам подростков, которые реально отработали смену.">
+<meta name="theme-color" content="#21A038">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('ts_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="ratings">
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">⭐ Рейтинг</span><h1>Работодатели, которым <span class="grad-text">доверяют подростки</span></h1><p class="lead">Оценку ставят только те, кто реально отработал смену. Работодатели — публично, подростки — через бейджи и индекс надёжности.</p></div></section>
+
+<section style="padding-top:8px"><div class="container">
+  <div class="card" style="padding:0;overflow:hidden" id="rateList"></div>
+</div></section>
+<section style="padding-top:0"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Честная система</span><h2>Как устроены взаимные оценки</h2></div>
+  <div class="grid g3">
+    <div class="card reveal"><div class="ico">🏢</div><h3>Компании — публично</h3><p>4 критерия: оплата вовремя, как в описании, отношение, безопасность. Только после подтверждённой смены.</p></div>
+    <div class="card reveal"><div class="ico blue">🧑‍🎓</div><h3>Подростки — без звёзд</h3><p>Бейджи навыков и «индекс надёжности», который видит только работодатель с откликом. Защита от травли.</p></div>
+    <div class="card reveal"><div class="ico yel">🙈</div><h3>Слепая оценка</h3><p>Оценки обеих сторон открываются одновременно. Снижение рейтинга можно обжаловать (стандарт 289-ФЗ).</p></div>
+  </div>
+</div></section>
+<section style="padding-top:0"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Отзывы</span><h2>Что говорят ребята</h2></div>
+  <div class="grid g2" id="reviews"></div>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
